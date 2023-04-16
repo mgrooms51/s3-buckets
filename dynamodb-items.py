@@ -1,6 +1,10 @@
-import boto3
+#import boto3 and boto3 resource for dynamodb 
 
+import boto3
 dynamodb = boto3.resource('dynamodb')
+
+#create table items use .put_item to add items to the table 
+
 table = dynamodb.Table('movies')
 table.put_item(
     Item={
